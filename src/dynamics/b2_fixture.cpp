@@ -134,6 +134,7 @@ void b2Fixture::CreateProxies(b2BroadPhase* broadPhase, const b2Transform& xf)
 	{
 		b2FixtureProxy* proxy = m_proxies + i;
 		m_shape->ComputeAABB(&proxy->aabb, xf, i);
+		// 把m_tree的数组的节点id返回给body.
 		proxy->proxyId = broadPhase->CreateProxy(proxy->aabb, proxy);
 		proxy->fixture = this;
 		proxy->childIndex = i;
