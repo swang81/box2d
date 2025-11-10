@@ -255,6 +255,7 @@ void b2ContactManager::AddPair(void* proxyUserDataA, void* proxyUserDataB)
 	bodyB = fixtureB->GetBody();
 
 	// Insert into the world.
+	// 插入m_contactlist的第一位置，这里没有哨兵节点。m_contactlist为双向链表。
 	c->m_prev = nullptr;
 	c->m_next = m_contactList;
 	if (m_contactList != nullptr)

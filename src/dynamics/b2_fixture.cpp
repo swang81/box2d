@@ -154,6 +154,7 @@ void b2Fixture::DestroyProxies(b2BroadPhase* broadPhase)
 	m_proxyCount = 0;
 }
 
+// 如果transfrom1 = transform2时，代表更新AABB而已。
 void b2Fixture::Synchronize(b2BroadPhase* broadPhase, const b2Transform& transform1, const b2Transform& transform2)
 {
 	if (m_proxyCount == 0)

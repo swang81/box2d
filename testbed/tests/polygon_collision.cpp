@@ -34,7 +34,7 @@ public:
 
 		{
 			m_polygonB.SetAsBox(0.5f, 0.5f);
-			m_positionB.Set(19.345284f, 1.5632932f);
+			m_positionB.Set(5.345284f, 1.5632932f);
 			m_angleB = 1.9160721f;
 			m_transformB.Set(m_positionB, m_angleB);
 		}
