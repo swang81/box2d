@@ -22,6 +22,7 @@
 
 #include "box2d/b2_broad_phase.h"
 #include <string.h>
+#include <stdio.h>
 
 b2BroadPhase::b2BroadPhase()
 {
@@ -126,6 +127,8 @@ bool b2BroadPhase::QueryCallback(int32 proxyId)
 	m_pairBuffer[m_pairCount].proxyIdA = b2Min(proxyId, m_queryProxyId);
 	m_pairBuffer[m_pairCount].proxyIdB = b2Max(proxyId, m_queryProxyId);
 	++m_pairCount;
+
+
 
 	return true;
 }
